@@ -37,4 +37,7 @@ for(let key in animal){
 for(let name of names){
     console.log(name)
 }
+for(var element of [5,4,3,2,0,1]) {
+     console.log(element);
+}
 
