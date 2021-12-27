@@ -9,6 +9,15 @@ function cookMaggi(maggi, pani, tapeli) {
         +"using"+tapeli +"pan")
 }
 cookMaggi(4, 8 , 1)
+//lasagna recipe 
+ const EXPECTED_MINUTES_IN_OVEN = 40 ;
+ let actualMinutesInOven = 30 ;
+ function remainingMinutesInOven(actualMinutesInOven) {
+    return  EXPECTED_MINUTES_IN_OVEN - actualMinutesInOven ;
+  }
+console.log(remainingMinutesInOven(actualMinutesInOven))
+
+
 
 //Make Sandwich
 let bread1 = prompt("Which bread would you like to have:-")
