@@ -30,5 +30,8 @@ console.log(result3);
 let result4 = s.search(reg);
 console.log(result4);
 
+// 5) replace() - Return new replaced string with all the replacement( if no global flag(g) then first match will be replaced)
+let result5 = s.replace(reg, "ritesh.")
+console.log(result5);
 
 
