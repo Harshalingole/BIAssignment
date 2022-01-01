@@ -11,3 +11,8 @@ function firstWord(s1) {
     return s1.substr(0, spaceindex)
 }
 console.log(firstWord('see and stop'))
+//Strin:Replace
+function normalize(s1) {
+    return s1.replaceAll('-', '/' )
+}
+console.log(normalize('20-05-2017'))
