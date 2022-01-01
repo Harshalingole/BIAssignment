@@ -17,5 +17,27 @@ z
 // String Operators
 
 
+// logical Operators
+
+//And &&
+let a = true && true
+let b = true && false
+let c = false && false
+let d =false && true
+a
+b
+c
+c
+// OR 
+let p = true || true
+let q = true || false
+let r = false || false
+let s = false || true
+p
+q
+r
+s
+
+
 
 
