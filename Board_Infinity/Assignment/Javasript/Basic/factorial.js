@@ -31,5 +31,17 @@ console.log(factorial(5))
 //----->1) how to stored or extract loop values in differnt data types.
 //----->2)  
 
+//Write a fibonacci series
+function fibbo(a) {
+    let n1 = 0, n2=1 ,nextTerm;
+    for(let i= 2 ; i<=a; i++) {
 
+       ///?? i=1;
 
+        console.log(n1); //
+        nextTerm = n1 + n2; //---> what happening in this code;//0+1=1
+        n1 = n2;//1
+        n2 = nextTerm;//1
+    }
+}
+console.log(fibbo(10));  
