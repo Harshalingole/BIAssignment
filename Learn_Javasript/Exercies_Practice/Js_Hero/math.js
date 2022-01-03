@@ -54,5 +54,25 @@ function getRandomIntInclusive(min, max) {
 console.log(getRandomIntInclusive(1,6))
 
 //parseInt
+//Write a function add that takes a string with a summation task and returns its result as a number. Two natural numbers should be added. The summation task is a string of the form '102+17
+//first way of doing but not fully efficient
+function add(x1) {
+    a = Number(parseInt(x1));
+    console.log(typeof(b))
+    b = Number(x1.substr(x1.indexOf("+")+ 1))
+    console.log(typeof(b))
+    return x1 = a + b;  
+}
+console.log(add('102+17'))
+//second way fully effient
+function add(x1) {
+    a = (parseInt(x1));
+    b = parseInt(x1.substr(x1.indexOf("+")))
+    return x1 = a + b;  
+}
+console.log(add('102+17'))
+
+
+
 
 
