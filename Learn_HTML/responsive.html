@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .menu{
+            float: left ;
+            padding: 10px;
+            width: 20%;
+        }
+        .menuitem   {
+            border-bottom: 1px solid green;
+            margin-top: 7px;
+            text-align: left;
+            padding: 8px;
+        }
+        .main   {
+            float: left;
+            padding: 0 20px;
+            background-color: white;
+            width: 60%;
+            overflow: hidden;
+        }
+        .right  {
+            float: left;
+            background-color: lightskyblue;
+            padding: 10px 15px;
+            margin-top: 7px;
+            width: 20%;
+        }
+        /* for tablets scren */
+        @media only screen and  (max-width: 800px) {
+            .main{
+                width: 80%;
+                padding: 0%;
+            }
+            .right{
+                width: 100%;
+            }
+        @media only screen and (max-width:500px) {
+            .menu, .main, .right{
+                width: 100%;
+            }
+        }       
+    }
+        .lft    {
+            background-color: skyblue;
+            width: 20%;
+            padding: 20px;
+            float: left;
+        }
+        .center {
+            background-color: lightgrey;
+            width: 60%;
+            padding: 20px;
+            float: left;
+        }
+        .rth {
+            background-color: lime;
+            width: 20%;
+            padding: 20px;
+            float: left;
+        }
+        @media only screen and (max-width: 800px){
+            .rth, .center, .lft{
+                width: 100%;
+                padding: 20px;
+            }
+        }
+
+    </style>
+</head>
+<body style="font-family:Verdana, Geneva, Tahoma, sans-serif;">
+
+    <div style="background-color:#f1f1f1; padding:20px; height: 250px;">
+        <h1>Cinque Terre</h1>
+        <h3 style="font-weight: lighter;"> Resize the browser window</h3>
+    </div>
+
+    <div style="overflow:auto;">
+        <div class="menu">
+            <div class="menuitem">The Walk</div>
+            <div class="menuitem">Transport</div>
+            <div class="menuitem">History</div>
+            <div class="menuitem">Gallary</div>
+        </div>
+   
+
+    <div class="main">
+      
+        <h1>The Walk</h1>
+        <p>The walk from Monterosso to Riomaggiore will take you approximately two hours, give or take an hour depending on the weather conditions and your physical shape.</p>
+        <img src="/img/5terre.jpg" alt="5terre" style="width: 100%;;">
+       </div>
+        
+    
+
+    <div class="right" style="max-wdth:100%">
+        <h1>What?</h1>
+        <p>Cinque Terre comprises five villages: Monterosso, Vernazza, Corniglia, Manarola, and Riomaggiore.</p>
+        <h1>where?</h1>
+        <p>On the northwest cost of the Italian Riviera, north of the city La Spezia.</p>
+        <h1>Price?</h1>
+        <p>The Walk is free!</p>
+    </div>
+</div>
+
+    <div style="background-color: lightgray; padding: 10px; margin-top: 5px; font-size: small; float: left; width: 100%;">
+        <p>This web page is a part of a demonstration of fluid web design made by w3schools.com. Resize the browser window to see the content respond to the resizing.</p>
+    </div> <br>
+    <hr>
+
+    
+    <!-- media QUERIES -->
+    <div class="lft">
+        <h3>Left</h3>
+    </div>
+
+    <div class="center">
+        <h3>main</h3>
+    </div>
+    
+    <div class="rth">
+        <h3>right</h3>
+    </div>
+</body>
+</html>
