@@ -105,5 +105,49 @@ for(let x=1; x<str.length; x++)  //-------------- Not understand what happening 
   }                            //------------
 console.log(result.join(''));
 
+// 7. Write a JavaScript program to sort the items of an array.
 
+// var arr1 = [ 3, 8, 7, 6, 5, -4, -3, 2, 1 ];
+  //My logic
+var arry=[-3,8,7,6,5,-4,3,2,1];
+arry.sort(function(a,b) {
+  return a - b
+})
+arry
+
+//Provided answer
+const arr1=[-3,8,7,6,5,-4,3,2,1];
+const arr2=[];
+let min=arr1[0];
+let pos;
+var max=arr1[0];
+for (i=0; i<arr1.length; i++)
+{
+        if (max<arr1[i]) max=arr1[i];
+}
+
+for (var i=0;i<arr1.length;i++)
+{
+        for (let j=0;j<arr1.length;j++)
+        {
+                if (arr1[j]!="x")
+                {
+                        if (min>arr1[j]) 
+                        {
+                                min=arr1[j];
+                                pos=j;
+                        }
+                }
+        }
+        arr2[i]=min;
+        arr1[pos]="x";
+        min=max;
+}
+console.log(arr2);
+
+// 8. Write a JavaScript program to find the most frequent item of an array.
+var arr3=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+function frequent() {
+  
+}
 
