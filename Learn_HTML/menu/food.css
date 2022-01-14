@@ -1,0 +1,85 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+nav {
+    background-color: black;
+    /* width: 100%; */
+    margin: 0;
+    padding: 0  ;
+    /* overflow: hidden; */
+}
+
+nav .menu-icon, nav a {
+    display: inline-block;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+    padding: 8px 16px;
+    margin-top: 0;
+}
+nav .menu-icon:hover, nav a:hover {
+    background-color: lightgray;
+}
+
+/* Overlay css */
+.overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0%;
+    background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    width: 100%;
+    top: 10%;
+    margin-top: 1.8em;
+    text-align: center;
+}
+.overlay-content a {
+    display: block;
+    text-decoration: none;
+    padding: 8px;
+    font-size: 2.2em;
+    color: #818181;
+    transition: 0.3s;
+}
+.overlay .closebtn {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    font-size: 3.75em;
+    text-decoration: none;
+    padding: 0;
+    background-color: transparent;
+}
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+/* overlay ---img  */
+
+@media only screen and (min-width: 700px){
+    nav .menu-icon {
+        display: none;
+    }  
+}
+@media only screen and (max-width: 500px){
+    nav .menu-icon {
+        display: inline-block;
+    }  
+}
+
+
+
+

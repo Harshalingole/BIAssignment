@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="food.css">
+    <title>My food</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+       <span class="menu-icon" onclick="openNav()">&#9776; </span>
+       <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" id="clsbtn" onclick="closeNav()">&times;</a>
+           <div class="overlay-content">
+               <a href="#">About</a>
+               <a href="#">Services</a>
+               <a href="#">Clients</a>
+               <a href="#">Contacts</a>
+           </div>
+       </div> 
+       <a href="#"><i class="fa fa-facebook"></i></a>
+       <a href="#"><i class="fa fa-instagram"></i></a>
+       <a href="#"><i class="fa fa-snapchat"></i></a>
+       <a style="float: right;" href="#"><i class="fa fa-search"></i></a>
+    </nav>
+    <script>
+       function openNav() {
+           document.getElementById("myNav").style.width="40%";
+       }
+       function closeNav() {
+           document.getElementById("myNav").style.width="0%";
+       }
+    </script>
+</body>
+</html>
