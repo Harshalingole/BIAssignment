@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gird Layout</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    body {
+        box-sizing: border-box;
+    }
+    .container {
+        display: grid;
+        background-color: crimson;
+        /* height: 800px;
+        width: auto; */
+        /* grid-gap: 50px; */
+        /* grid-template-rows: 110px 110px 110px ;
+        grid-template-columns: 110px 110px 110px;       */
+        /* grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: 7% 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr); */
+        row-gap: 15px;
+        column-gap: 15px;
+        grid-template: repeat(5, 1fr) / repeat(5, 1fr) /
+        'header header header header header '
+        'menu main main main right right'
+        'menu footer footer footer footer footer';
+    }
+    .item   {
+        background-color: rgb(255, 255, 0);
+        font-size: 50px;
+        color: black;
+        width: auto;
+    }
+    #item1 {
+        /* grid-column-start: 1;
+        grid-column-end: 3; */
+        background-color: lightgrey;
+        grid-area: header;
+    }
+#item2 { grid-area: menu; }
+#item3 { grid-area: main; }
+#item4 { grid-area: right; }
+#item5 { grid-area: footer; }
+
+</style>
+<body>
+    <div class="container">
+        <div class="item" id="item1">Header</div>
+        <div class="item" id="item2">Menu</div>
+        <div class="item" id="item3">gain</div>
+        <div class="item" id="item4">Right</div>
+        <div class="item" id="item5">footer</div>   
+    </div>
+</body>
+</html>

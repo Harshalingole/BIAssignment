@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav-BAR</title>
+    <style>
+        /* Navbar Using "a" tag  */
+        nav {
+            box-sizing: border-box;
+            margin: 0;
+            background-color: black;
+            height: auto;
+            max-width: 100%;
+            overflow: hidden;
+        }
+        a {
+            /* display: block */
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+            background-color: lightgray;
+            padding: 15px;
+            /* margin: 0.5px; */
+            float: left;
+        }
+        a:hover {
+            background-color: white;
+        }
+/* Navabar Using li element */
+        li {
+            list-style-type: none;
+            color: black;
+            border: 0.5px solid white;
+            font-weight: 600;
+            background-color: lightgray;
+            padding: 15px;
+            float: left;
+        }
+        li:hover {
+            background-color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Navbar Using _a_ tag</h1>
+    <nav class="nav-a-tag">
+        <a href="#home">HOME</a>
+        <a href="#home">HOME</a>
+        <a href="#home">HOME</a>
+        <a href="#home">HOME</a>
+    </nav><br>
+    <h1>Navbar Using _li_ tag</h1>
+
+    <nav class="nav-li-tag">
+        <li>Home</li>
+        <li>Home</li>
+        <li>Home</li>
+        <li>Home</li>
+        <li style="float: right;">Home</li>
+    </nav>
+</body>
+</html>
