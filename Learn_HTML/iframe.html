@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <style>
+         #iframe{
+             border-width: 100px;
+             height: fit-content;
+             width: fit-content;
+             background-color: red;
+             border: none;
+         }
+         #iframe:hover{
+             background-color: seagreen;
+        }
+     </style>
+</head>
+<body>
+    <h2> Target For I-frame Link</h2>
+    <div id="iframe">
+    <iframe src="Classes.html" name="iframe_a" title="Youtube" height="300px" width="900px"></iframe><br><hr>
+    </div>
+    <p><a href="https://www.youtube.com/embed/tgbNymZ7vqY" target="iframe_a"> open w3 scholl</a></p>
+
+    <h2>Iframe - Target for a Link</h2>
+
+<iframe src="demo_iframe.htm" name="iframe_a" height="300px" width="100%" title="Iframe Example"></iframe>
+
+<p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+
+<p>When the target attribute of a link matches the name of an iframe, the link will open in the iframe.</p>
+</body>
+</html>
