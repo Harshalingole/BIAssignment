@@ -1,5 +1,9 @@
 //JavaScript array - Exercises
 
+//Doughts 
+   //---> Question No. 6  : Not able to figure out Answer and also not able to understand Solution.
+   //-->  Question No.7 : Not able to understand Provided Ans need a Breack Down of Code.
+
 // 1. Write a JavaScript function to check whether an `input` is an array or not.
   //My logic 1
 function is_array(input) {
@@ -79,21 +83,23 @@ console.log(join(myColor,"+"));
 console.log(join(myColor,"_"));
 
 // 6. Write a JavaScript program which accept a number as input and insert dashes (-) between each two even numbers. For example if you accept 025468 the output should be 0-254-6-8.
-
-function accept(input,b) {
-    let a = input.toString()
+//My logic
+function accept1(input,b) {
+    let a = input.toString().split("")
+    a
     return a
 }
-console.log(accept(025468, "_"))
+console.log(accept1(025468, "_"))
  // Provide Answer
 const num= 025468;   
 const str = num.toString();
-str //---why its removing 0 and how print 0 also.
+str //---why its removing 0 and how to  include 0 also .
 var result = [str[0]];
 result
-var res
-for(let x=1; x<str.length; x++)  //-------------- Not understand what happening here in the code
+var res;
+for(let x=1; x<str.length; x++)  //-------------- Not able to understand what happening here in the code ! code breck down need
   {
+    console.log(x);
     if((str[x-1]%2 === 0)&&(str[x]%2 === 0))
      {
       res = result.push('-', str[x]);
@@ -102,7 +108,8 @@ for(let x=1; x<str.length; x++)  //-------------- Not understand what happening 
      {
       result.push(str[x]);
      }
-  }                            //------------
+  }     
+  result                       //------------
 console.log(result.join(''));
 
 // 7. Write a JavaScript program to sort the items of an array.
@@ -147,7 +154,16 @@ console.log(arr2);
 
 // 8. Write a JavaScript program to find the most frequent item of an array.
 var arr3=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
-function frequent() {
-  
+// Sample Output = a ( 5 times )
+function frequent(arr3) {
+  let resultObject={};
+  for(item of arr3){
+    if (resultObject[item]){
+      resultObject[item]+=1;
+    }else resultObject[item]=1;
+  }
+  return resultObject;
 }
+console.log(frequent(arr3));
+
 
