@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sticky positioning</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 5px;
+    }
+    body {
+      height: 2000px;
+      background-color: wheat;
+      margin: 0;
+    }
+    /* Style-Positioning Sticky(MAIN) */
+    main {
+      margin: 0;
+      background-color:salmon;
+      /* padding: 5px 5px; */
+      height: 360px;
+      /* width: 500px;   */
+      overflow-y: auto;
+    }
+    .contain {
+      background-color: lightblue;
+      /* margin: 12px  12px; */
+    }
+    .contain h1 {
+      /* border-bottom: 1px solid black; */
+      border-top: 1px solid black;
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 200;
+      padding: 1rem;
+    }
+    .active {
+      margin: 0;
+      background-color: lightgray;
+      font-weight: 800;
+      text-align: center;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0px;
+    }
+    /* Style- Positioning ABSOLUTE(SECTION__ABSOLUTE) */
+    #absolute {
+      margin-top: 2rem;
+      background-color:salmon;
+    }
+    .Ap1 {
+      background-color: rgb(154, 178, 231);
+      padding: 4rem 0;
+      height: 300px;
+      text-align: left;
+      position: relative;
+    }
+    .Ap2 {
+      background-color: rgb(230, 125, 230);
+      width: 200px;
+      height: 200px;
+      
+      position: absolute;  /* This is abosulte to the body */
+      top: 900px;
+      right: 10px;
+    }
+    /* Style- Positioning Fixed(FOOTER) */
+    footer {
+      background-color: slategray;
+      margin: 1rem 0;
+      padding: 0;
+      width: 100%; 
+      /* giving position fixed */
+      position: fixed;
+      bottom: 0px;
+      left: 0px;
+    }
+    footer nav , #navbar{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      margin: 0;
+      box-shadow: 0px 0px 15px black;
+    }
+    #navbar {
+      background-color: lightgreen;
+      margin-bottom: 3rem;
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0px;
+      z-index: 1;
+    }
+    footer a, #navbar a {
+      text-decoration: none;
+      color: black;
+      font-size: 1.5rem;
+      margin: 0;
+      padding: 1rem;
+      background-color: lightcyan;
+    }
+    footer a:hover, #navbar a:hover {
+      background-color: lightsalmon;
+    }
+  </style>
+</head>
+<body>
+  <nav id="navbar">
+    <a href="#about">Menu</a>
+    <a href="#about">About</a>
+    <a href="#about">Contact</a>
+  </nav>
+  <!-- Positioning sticky-Section -->
+  <main>
+    <!-- section-1 -->
+    <section class="contain">
+      <h1 class="active">A</h1>
+      <h1>Lorem, ipsum dolor.</h1>
+      <h1>Lorem, ipsum dolor.</h1>
+      <h1>Lorem, ipsum dolor.</h1>
+      <h1>Lorem, ipsum dolor.</h1>
+      <h1>Lorem, ipsum dolor.</h1>
+    </section>
+    <!-- section-2 -->
+    <section class="contain">
+      <h1 class="active">B</h1>
+      <h1>Lorem, ipsum dolor.</h1>
+      <h1>Lorem, ipsum dolor.</h1>
+      <h1>Lorem, ipsum dolor.</h1>
+      <h1>Lorem, ipsum dolor.</h1>
+      <h1>Lorem, ipsum dolor.</h1>
+    </section>
+    <!-- section-3 -->
+    <section class="contain">
+      <h1 class="active">C</h1>
+      <h1>Lorem, ipsum dolor.</h1>
+      <h1>Lorem, ipsum dolor.</h1>
+      <h1>Lorem, ipsum dolor.</h1>
+      <h1>Lorem, ipsum dolor.</h1>
+      <h1>Lorem, ipsum dolor.</h1>
+    </section>
+    <!-- section-4 -->
+    <section class="contain">
+      <h1 class="active">D</h1>
+      <h1>Lorem, ipsum dolor.</h1>
+      <h1>Lorem, ipsum dolor.</h1>
+      <h1>Lorem, ipsum dolor.</h1>
+      <h1>Lorem, ipsum dolor.</h1>
+      <h1>Lorem, ipsum dolor.</h1>
+    </section>
+  </main>
+  <!-- Positioning Absolute--Section -->
+  <section id="absolute">
+    <h1>Style- Positioning ABSOLUTE(SECTION__ABSOLUTE)</h1>
+    <div class="parent Ap1">
+      SIBLING 1 & PARENT 1
+      <div class="Pa1">
+
+      </div>
+    </div>
+    <div class="parent Ap2">
+      SIBLING 2
+    </div>
+  </section>
+  <!-- Style- Positioning Fixed(FOOTER) -->
+  <footer>
+    <h3>Style- Positioning ABSOLUTE(SECTION__ABSOLUTE)</h3>
+    <nav>
+      <a href="#about">Menu</a>
+      <a href="#about">About</a>
+      <a href="#about">Contact</a>
+    </nav>
+  </footer>
+</body>
+</html>
