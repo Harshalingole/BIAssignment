@@ -17,3 +17,18 @@ y = fruits2.join(" ")
 y
 
 //JavaScript Sorting Arrays
+const f1 = ["Banana", "Orange", "Apple", "Mango"];
+f1.sort();
+f1
+f1.reverse();
+f1
+
+    ////Numeric Sort
+const points = [40, 100, 1, 5, 25, 10];
+points.sort(function(a, b) {return a - b});
+points
+// Use the same trick to sort an array descending:
+points.sort(function(a, b) {return b - a});
+points
+
+
