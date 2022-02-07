@@ -1,7 +1,7 @@
 //Doughts 
    //---> Question No. 7  : [^a-zA-Z0-9 -]
    //---> Question No. 10 : ([a-z]+)|([A-Z]+)
-   //---> Question No. 11 : ("/^" + separator + "/")
+   //---> Question No. 12 : ("/^" + separator + "/")
    
 
 //1.Write a JavaScript function to check whether an `input` is a string or not.
@@ -43,9 +43,8 @@ function abbrev_name(name) {
     let space = name.search(" ") + 1 ;
     console.log(space)
     a = name.substring(space)
-    console.log(a)
-    c = a.charAt(0)
-    console.log(abbrev)
+    console.log(a);
+    c = a.charAt(0);
     let final = name.replace( a, `${c}.`)
     return final;
 }
@@ -86,17 +85,18 @@ protect_email = function (user_email) {
 console.log(protect_email("harshal733483@gmail,com"));
 
 //7. Write a JavaScript function to parameterize a string.
-
+  //My logic
 string_parameterize = function(str) {
-    var lowercase = str.toLowerCase()
+    var lowercase = str.trim().toLowerCase()
     console.log(lowercase)
     return ` "${lowercase.replaceAll(" ", "_")}"`;
 }
-console.log(string_parameterize("Robin Singh from USA."));
-
-string_parameterize = function (str1) {
-    return str1.trim().toLowerCase().replace(/[^a-zA-Z0-9 -]/, "").replace(/\s/g, "-"); //----.what is [^a-zA-Z0-9 -]
+console.log(string_parameterize("Robin Singh@&* from USA."));
+//Provided Ans
+string_parameterize1 = function (str1) {
+    return str1.trim().toLowerCase().replace(/\s/g, "-"); //----.what is [^a-zA-Z0-9 -] & whats it doing
 };
+console.log(string_parameterize1("Robin Singh from USA.Robin Singh @ &*"))
 
 //8. Write a JavaScript function to capitalize the first letter of a string
    //My ans
@@ -113,24 +113,26 @@ capitalize = function(str1){
 console.log(capitalize('the quick brown fox '));
 
 //10. Write a JavaScript function that takes a string which has lower and upper case letters as a parameter and converts upper case letters to lower case, and lower case letters to upper case.
-function swapcase(str) {
-    var array = str.split("")
-    console.log(array);
-    array.forEach(element => {
-        var lowercase = array.toUpperCase();
-        if(element == a){
+//----------------->
+// function swapcase(str) {
+//     var array = str.split("");
+//     array
+//     array.forEach(element => {
+//         var lowercase = array.toUpperCase();
+//         if(element == a){
 
-        }
-    });
-}
-
-swapcase = function swapcase(str) { // ([a-z]+)|([A-Z]+) What is it for and what its doing
+//         }
+//     });
+// }
+// console.log(swapcase('AaBbc'));
+//--------------->
+swapcase1 = function swapcase(str) { // ([a-z]+)|([A-Z]+) What is it for and what its doing
     return str.replace(/([a-z]+)|([A-Z]+)/g, function(match, chr) {
         return chr ? match.toUpperCase() : match.toLowerCase();
     });
 }
-console.log(swapcase('AaBbc'));
-console.log(swapcase('PyThOn'));
+console.log(swapcase1('AaBbc'));
+console.log(swapcase1('PyThOn'));
 
 //11. Write a JavaScript function to convert a string into camel case.
     // My Ans::
@@ -147,15 +149,13 @@ console.log(camelize("JavaScript exercises"));
 console.log(camelize("JavaScriptp xercises"));
 
 //12. Write a JavaScript function to uncamelize a string.
-function uncamelize(str,value){
-
-}
+//provided Ans
 function uncamelize(str, separator) {
     // Assume default separator is a single space.
     if(typeof(separator) == "undefined") {
       separator = " ";
     }
-    // Replace all capital letters by separator followed by lowercase one
+
     var str = str.replace(/[A-Z]/g, function (letter) 
     {
       let z = separator + letter.toLowerCase();
@@ -203,6 +203,119 @@ function insert(str, str1, posi) {
     }
     return final =  xyz;
 }
+function insert(str, str1, posi) {
+    var final = str ;
+    var mid, spl ;
+    if(typeof(str1) === "undefined" && posi === undefined) {
+        xyz = str.trim();
+    }else if(posi === undefined){
+        posi = 0;
+        xyz= str1.concat(" ",xyz)
+    } else {
+       let a = `${str.substring(0, posi)}`;
+       let c = a + " "+ str1
+       d = str.substring(str.indexOf(a)+ a.length)
+       xyz = `${c} ${d}`
+    }
+    return final =  xyz;
+}
 console.log(insert('We are doing some exercises.'));
 console.log(insert('We are doing some exercises.','JavaScript '));
 console.log(insert('We are doing some exercises.','JavaScript ',18));
+console.log(insert('The Brown Box.','quick ',4));
+
+//15.Write a JavaScript function to humanized number (Formats a number to a human-readable string.) with the correct suffix such as 1st, 2nd, 3rd or 4th.
+   // My Ans
+function humanize_format(num) {
+    if(typeof(num) == "undefined")  {
+        return "Insert A Valid Number"
+    }
+    var final ;
+    switch (num%10) {
+        case 0:
+            final = "Insert Value";
+            break;
+        case 1:
+            final = `${num}st`;
+            break;
+        case 2:
+            final = `${num}nd`;
+            break;
+        case 3:
+            final = `${num}rd`;
+            break;
+        default:
+            final = `${num}th`;
+    }
+    return final
+}
+
+console.log(humanize_format());
+console.log(humanize_format(1));
+console.log(humanize_format(8));
+console.log(humanize_format(301));
+console.log(humanize_format(402));
+console.log(humanize_format(403));
+    //Provide Ans
+    humanize_format = function humanize(num) {
+        if(typeof(num) == "undefined") return;
+       if(num % 100 >= 11 && num % 100 <= 13)
+             return num + "th";
+             
+             switch(num % 10) {
+                 case 1: return num + "st";
+                 case 2: return num + "nd";
+                 case 3: return num + "rd";
+             }
+             return num + "th";
+         }
+// 16.Write a JavaScript function to truncates a string if it is longer than the specified number of characters. Truncated strings will end with a translatable ellipsis sequence ("…") (by default) or specified characters.
+function text_truncate(str, pos, ins) {
+    if(typeof(pos)=="undefined") {
+        pos = str.length;
+        ins = "";
+    }
+    if(typeof(ins)== "undefined") {
+        ins = "..."
+    }
+    if(str.length > pos) {
+       return  str = `"${str.slice(0,pos)}${ins}"`
+    }else {
+        return str
+    }    
+}
+
+console.log(text_truncate('We are doing JS string exercises.'))
+console.log(text_truncate('We are doing JS string exercises.',19))
+console.log(text_truncate('We are doing JS string exercises.',15,'!!'))
+console.log(text_truncate('We are doing .',15,'!!'))
+
+//17. Write a JavaScript function to chop a string into chunks of a given length.
+   // My logic 
+function string_chop(str,pos) {
+    var xyz, leng;
+    if(typeof(pos) === "undefined") {
+         pos = str.length;
+    }
+    leng =  Math.ceil((str.length/pos));
+    leng
+    for(let i = 0 ; i <= leng ; i = i + pos) {
+        console.log(i);
+       return xyz = str.split(str.charAt(pos+1),pos);
+    }
+    return xyz;
+}
+console.log(string_chop('w3resource'));
+console.log(string_chop('w3resource',2));
+console.log(string_chop('w3resource',3));
+  // Proivded ans
+  string_chop =  function(str, size){
+    if (str == null) return [];
+    str = String(str);
+    size = ~~size;
+    console.log(size)
+return size > 0 ? str.match(new RegExp('.{1,' + size + '}', 'g')) : [str];
+}    
+console.log(string_chop('w3resource'));
+console.log(string_chop('w3resource',2));
+console.log(string_chop('w3resource',3));
